@@ -1,0 +1,269 @@
+@font-face {
+    font-family: "Shaka Pow";
+    src: url("fonts/ShakaPow.woff2") format("woff2"),
+    url("fonts/ShakaPow.woff") format("woff");
+} 
+@font-face {
+    font-family: "Anime";
+    src: url("fonts/anime.woff2") format("woff2"),
+    url("fonts/anime.woff") format("woff");
+}
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:800);
+
+body {
+margin: 0;
+padding: 0;
+overflow: hidden;
+font: 5em/1 Open Sans, Impact;
+text-transform: uppercase;
+cursor: url('medias/cursor.png'), pointer;
+}
+
+
+
+svg {
+position: absolute;
+width: 30%;
+height: 30%;
+z-index: 100;
+
+}
+
+.svg1 {
+    transform: skew(43deg);
+    left: 45%;
+    top: -5vh;
+}
+
+.svg2 {
+    top: 75vh;
+    left: 75%;
+}
+
+.text {
+fill: rgba(255, 255, 255, 0.267);
+stroke-width: 4;
+stroke-linejoin: round;
+stroke-dasharray: 70 330;
+stroke-dashoffset: 0;
+-webkit-animation: stroke 6s infinite linear;
+animation: stroke 6s infinite linear;
+}
+.text:nth-child(5n+1) {
+stroke: #F2385A;
+-webkit-animation-delay: -1.2s;
+animation-delay: -1.2s;
+}
+.text:nth-child(5n+2) {
+stroke: #F5A503;
+-webkit-animation-delay: -2.4s;
+animation-delay: -2.4s;
+}
+.text:nth-child(5n+3) {
+stroke: #ee3bd6;
+-webkit-animation-delay: -3.6s;
+animation-delay: -3.6s;
+}
+.text:nth-child(5n+4) {
+stroke: #56D9CD;
+-webkit-animation-delay: -4.8s;
+animation-delay: -4.8s;
+}
+.text:nth-child(5n+5) {
+stroke: #3AA1BF;
+-webkit-animation-delay: -6s;
+animation-delay: -6s;
+}
+
+@-webkit-keyframes stroke {
+100% {
+stroke-dashoffset: -400;
+}
+}
+@keyframes stroke {
+100% {
+stroke-dashoffset: -400;
+}
+}
+
+.div1 {
+    display: block;
+}
+
+.div2 {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.gauche {
+    background-color: #ffffff;
+    height: 100%;
+    left: -100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    transform: skew(-45deg);
+    width: 150%;
+    z-index: 5;
+}
+.gauche2 {
+    width: 100%;
+    height: 100%;
+}
+.imagegauche {
+    
+    background:url(medias/planche_luckyluck.jpg) center no-repeat transparent;
+    height: 100%;
+    left: 50%;
+    position: absolute;
+    top: 0;
+    transform: skew(45deg);
+    width: 100%;
+    filter: blur(3px);
+}
+
+.persogauche { 
+    position: absolute;
+    top: 35vh;
+    left: 107vw;
+    z-index: 90;
+    transform: skew(35deg);
+}
+
+.bullegauche {
+    position: absolute;
+    top: -2vh;
+    left: 120vw;
+    z-index: 90;
+    transform: skew(35deg);
+    width: 430px;
+    height: 400px;
+}
+
+.persodroite {
+    position: absolute;
+    z-index: 150;
+    top: -7vh;
+    right: 2vw;
+    width: 350px;
+    height: 450px;
+}
+
+.bulledroite {
+    position: absolute;
+    z-index: 150;
+    top: 30vh;
+    right: 20vw;
+    width: 450px;
+    height: 400px;
+}
+
+.droite {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #ffffff;
+}
+.imagedroite {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: url(medias/planche_lavieenslip.jpg) center no-repeat transparent;
+    filter: blur(3px);
+}
+
+@media screen and (max-width: 768px) {
+
+.gauche {
+    top: -65%;
+    left: 0;
+    transform: skewY(-35deg);
+    width: 100%;
+}
+.imagegauche {
+    background-size: 65%;
+    left: 0;
+    top: 50%;
+    transform: skewY(35deg);
+}
+
+.imagedroite {
+    top: -15%;
+    background-size: 65%;
+}
+
+}
+
+.load { 
+    position: absolute;
+    top: 80%;
+    left: 45%;
+    margin-left: -39px;
+    margin-top: 90px;
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 17px;
+    }
+    
+    a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+button {
+    position: relative;
+    bottom: 7vh;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    font-size: inherit;
+    font-family: "Anime";
+}
+button.lien {
+    font-weight: 600;
+    color: #000000;
+    text-transform: uppercase;
+    padding: 1.25em 2em;
+    background: #74f5f5;
+    border: 2px solid #358181;
+    border-radius: 0.75em;
+    transform-style: preserve-3d;
+    transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+button.lien::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #35a5a5;
+    border-radius: inherit;
+    box-shadow: 0 0 0 2px #358181, 0 0.625em 0 0 #ffffff00;
+    transform: translate3d(0, 0.75em, -1em);
+    transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+button.lien:hover {
+    background: #47e7e7;
+    transform: translate(0, 0.25em);
+}
+button.lien:hover::before {
+    box-shadow: 0 0 0 2px #358181, 0 0.5em 0 0 #ffffff00;
+    transform: translate3d(0, 0.5em, -1em);
+}
+button.lien:active {
+    background: #35a5a5;
+    transform: translate(0em, 0.75em);
+}
+button.lien:active::before {
+    box-shadow: 0 0 0 2px #358181, 0 0 #47e7e7;
+    transform: translate3d(0, 0, -1em);
+}
